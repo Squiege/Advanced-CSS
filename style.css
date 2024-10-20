@@ -1,0 +1,79 @@
+* {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.background_fade {
+    background-color: rgba(255, 0, 0, 0.3);
+    width: 250px;
+}
+
+body {
+    background-color: aqua;
+}
+
+h1 {
+    background-color: rgba(255, 255, 255, 0.801);
+    width: 250px;
+    text-shadow: 3px 3px 0 grey;
+}
+
+button {
+    background-color: rgba(2, 199, 81, 0.726);
+    transition: background-color 0.3s ease;
+    width: 200px;
+}
+
+button:hover {
+    background-color: rgba(201, 0, 140, 0.726);
+    color: white;
+}
+
+button:active {
+    animation: get-bigger 1.0s ease-in-out infinite alternate;
+}
+
+a {
+    color: rgba(201, 0, 140, 0.726);
+    transition: color 2.5s ease;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.801);
+}
+
+img {
+    margin-top: 100px;
+    animation: spin-img 4s ease-in-out infinite;
+}
+
+@keyframes get-bigger {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(2);
+    }
+    75% {
+        transform: scale(2.5);
+    }
+    100% {
+        transform: scale(3);
+    }
+}
+
+@keyframes spin-img {
+    0% {
+        transform: rotate(0deg) translateX(0);
+    }
+    50% {
+        transform: rotate(180deg) translateX(100px);
+    }
+    100% {
+        transform: rotate(360deg) translateX(0);
+    }
+}
